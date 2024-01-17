@@ -1,3 +1,5 @@
+-- Analysis was first done in SQL, then visuals were made in Tableau
+
 -- Cleaning data for analysis
 	select * from shark;
 
