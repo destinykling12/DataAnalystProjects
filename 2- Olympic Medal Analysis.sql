@@ -64,3 +64,11 @@ WHERE
 	SELECT Gender, Country, COUNT(Medal) AS Medal_Count
     FROM olympics
     GROUP BY Country, Gender;
+
+
+-- what sport earned the most gold medals
+	SELECT sport, COUNT(Medal) AS Medal_Count
+    FROM olympics
+    WHERE medal = 'Gold'
+    GROUP BY sport
+    ORDER BY Medal_Count DESC;
