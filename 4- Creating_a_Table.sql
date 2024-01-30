@@ -20,3 +20,6 @@ VALUES
     ;
     
 SELECT * FROM employee;
+
+SELECT CONCAT(FirstName, ' ', LastName) AS Name
+FROM employee;
