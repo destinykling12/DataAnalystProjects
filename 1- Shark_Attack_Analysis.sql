@@ -74,3 +74,23 @@ FROM shark
 GROUP BY Species
 ORDER BY percentage DESC;
 
+-- what area had the most surfing attacks
+SELECT activity, Area, COUNT(*) AS Attacks
+FROM shark
+WHERE activity = 'surfing'
+GROUP BY Area, activity
+ORDER BY Attacks DESC; 
+
+-- what area in which country had the most surfing attacks
+SELECT activity, Area, Country, COUNT(*) AS Attacks
+FROM shark
+WHERE activity = 'surfing'
+GROUP BY Area, Country, activity
+ORDER BY Attacks DESC; 
+
+-- which area had the most attacks?
+SELECT Area, COUNT(*) AS Attacks
+FROM shark
+GROUP BY Area
+ORDER BY Attacks DESC;
+
